@@ -1,7 +1,6 @@
 
 # TODO:
 # - add to /etc/modules.conf: alias char-major-10-200 tun
-# - add /dev/(net/)?tun c 10 200 to dev
 # - check for kernel 2.2 (currently tested on kernel 2.4)
 # Warning:
 # In case not using --comp we get:
@@ -24,6 +23,7 @@ BuildRequires:	glib-devel
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
 #Requires:	kernel >= 2.4
+Requires:	dev >= 2.8.0-29
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
