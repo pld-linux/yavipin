@@ -42,10 +42,10 @@ przestrzeni u¿ytkownika.
 %setup -q -n %{name}
 
 %build
-#%{__aclocal}
-#%{__autoheader}
+#%%{__aclocal}
+#%%{__autoheader}
 %{__autoconf}
-#%{__automake}
+#%%{__automake}
 %configure
 
 %{__make}
@@ -53,7 +53,7 @@ przestrzeni u¿ytkownika.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-#%{__make} install DESTDIR=$RPM_BUILD_ROOT #deosn't work - manuall install
+#%%{__make} install DESTDIR=$RPM_BUILD_ROOT #deosn't work - manuall install
 
 install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 
