@@ -12,7 +12,7 @@ Name:		yavipin
 Version:	0.9.6
 Release:	0.3
 Epoch:		1
-License:	Unknown
+License:	unknown
 Group:		Networking/Daemons
 Vendor:		Jerome Etienne (jme at off.net)
 Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tgz
