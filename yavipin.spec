@@ -2,7 +2,7 @@ Summary:	Secure tunnel using the state of art in network security.
 Summary(pl):	Bezpieczny tunel.
 Name:		yavipin
 Version:	0.9.6
-Release:	0.1
+Release:	0.3
 Epoch:		1
 License:	Unknown
 Group:		Networking/Daemons
@@ -16,6 +16,7 @@ BuildRequires:	glib-devel
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
 
+Requires:	kernel >= 2.4
 
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,7 +46,19 @@ przestrzeni u¿ytkownika.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+#%{__make} install DESTDIR=$RPM_BUILD_ROOT #deosn't work - manuall install
+
+#$ make install
+#mkdir -p /usr/local//bin
+#mkdir -p /usr/local//man/man8
+#/usr/bin/install -c src/yavipind /usr/local//sbin
+#/usr/bin/install -c src/yavipind.8 /usr/local//man/man8
+
+mkdir -p $RPM_BUILD_ROOT%{_sbindir}
+mkdir -p $RPM_BUILD_ROOT%{_mandir}/man8
+
+install -c src/yavipind $RPM_BUILD_ROOT%{_sbindir}
+install -c src/yavipind.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
 
 %clean
@@ -54,3 +67,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+
+#%attr(754,root,root) /etc/rc.d/init.d/vtund
+#%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) /etc/sysconfig/vtun
+#%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/vtund.conf
+%attr(750,root,root) %{_sbindir}/yavipind
+%doc %{_mandir}/man*/*
+
+# TODO:
+# - add to /etc/modules.conf: alias char-major-10-200 tun
+# - make system automagially do:
+#	mkdir /dev/net
+#	mknod /dev/net/tun c 10 200
+# - check for kernel 2.2 (currently tested on kernl 2.4)
+# Warning:
+# In case not using --comp we get:
+# yavipind: src/comp.c:55: comp_init: Assertion `comp_algoid >= 1 && comp_algoid
