@@ -20,7 +20,7 @@ URL:		http://yavipin.sourceforge.net/
 BuildRequires:	autoconf
 #BuildRequires:	automake
 BuildRequires:	glib-devel
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	zlib-devel
 #Requires:	kernel >= 2.4
 Requires:	dev >= 2.8.0-29
