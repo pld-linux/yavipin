@@ -16,6 +16,7 @@ License:	Unknown
 Group:		Networking/Daemons
 Vendor:		Jerome Etienne (jme at off.net)
 Source0:	http://twtelecom.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tgz
+# Source0-md5:	62ea055b362bd331b1ca98ce9953b7a8
 URL:		http://yavipin.sourceforge.net/
 BuildRequires:	autoconf
 #BuildRequires:	automake
