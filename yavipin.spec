@@ -15,7 +15,7 @@ Epoch:		1
 License:	unknown
 Group:		Networking/Daemons
 Vendor:		Jerome Etienne (jme at off.net)
-Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tgz
+Source0:	http://dl.sourceforge.net/yavipin/%{name}-%{version}.tgz
 # Source0-md5:	62ea055b362bd331b1ca98ce9953b7a8
 URL:		http://yavipin.sourceforge.net/
 BuildRequires:	autoconf
@@ -23,8 +23,8 @@ BuildRequires:	autoconf
 BuildRequires:	glib-devel
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	zlib-devel
-#Requires:	kernel >= 2.4
 Requires:	dev >= 2.8.0-29
+#Requires:	kernel >= 2.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
