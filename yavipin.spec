@@ -7,7 +7,7 @@
 # yavipind: src/comp.c:55: comp_init: Assertion `comp_algoid >= 1 && comp_algoid
 
 Summary:	Secure tunnel using the state of art in network security
-Summary(pl.UTF-8):   Bezpieczny tunel używający reguł sztuki bezpieczeństwa sieciowego
+Summary(pl.UTF-8):	Bezpieczny tunel używający reguł sztuki bezpieczeństwa sieciowego
 Name:		yavipin
 Version:	0.9.6
 Release:	0.3
