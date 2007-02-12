@@ -7,7 +7,7 @@
 # yavipind: src/comp.c:55: comp_init: Assertion `comp_algoid >= 1 && comp_algoid
 
 Summary:	Secure tunnel using the state of art in network security
-Summary(pl):	Bezpieczny tunel uøywaj±cy regu≥ sztuki bezpieczeÒstwa sieciowego
+Summary(pl.UTF-8):   Bezpieczny tunel u≈ºywajƒÖcy regu≈Ç sztuki bezpiecze≈Ñstwa sieciowego
 Name:		yavipin
 Version:	0.9.6
 Release:	0.3
@@ -33,11 +33,11 @@ toward each other. It forwards any kind of packet (IPv4, IPv6 or
 other) sent over the virtual point-to-point device (e.g. tun0). It
 fully runs in linux userspace.
 
-%description -l pl
-Yavipind jest pakietem tworz±cym bezpieczne tunele pomiÍdzy dwoma
-komputerami. Przesy≥a kaødy rodzaj pakietÛw (IPv4, IPv6, inne) poprzez
-wirtualne urz±dzenie point-to-point (np. tun0). Pracuje ca≥kowicie w
-przestrzeni uøytkownika.
+%description -l pl.UTF-8
+Yavipind jest pakietem tworzƒÖcym bezpieczne tunele pomiƒôdzy dwoma
+komputerami. Przesy≈Ça ka≈ºdy rodzaj pakiet√≥w (IPv4, IPv6, inne) poprzez
+wirtualne urzƒÖdzenie point-to-point (np. tun0). Pracuje ca≈Çkowicie w
+przestrzeni u≈ºytkownika.
 
 %prep
 %setup -q -n %{name}
